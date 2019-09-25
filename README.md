@@ -4,7 +4,8 @@
 
 #### Github repo for the Framer store component, "Fake Profile Image" which allows people to generate a customizable fake profile image generated using GAN's from ["This person does not exist"](https://thispersondoesnotexist.com)
 
-Find the compoonent on the Framer store or look it up here: [Fake Profile Image]("https://store.framer.com/package/atharvapatil/fake-profile-image")
+Find the component on the Framer store or look it up here: 
+[Fake Profile Image](https://store.framer.com/package/atharvapatil/fake-profile-image)
 
 
 
