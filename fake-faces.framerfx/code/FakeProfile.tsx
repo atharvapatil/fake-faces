@@ -7,12 +7,16 @@ export function FakeProfile(props) {
     return (
         <Frame
             center
-            size={bound}
+            width={bound}
+            height={bound}
+            size={"100%"}
             backgroundColor={boundDisplay ? boundColor : "transparent"}
         >
             <Frame
                 center
-                size={size}
+                size={"100%"}
+                width={size}
+                height={size}
                 image="https://thispersondoesnotexist.com/image"
                 borderRadius={radius + "%"}
                 overflow={"hidden"}
@@ -69,6 +73,6 @@ addPropertyControls(FakeProfile, {
         max: 50,
         step: 2,
         defaultValue: 50,
-        displayStepper: true,
+        displayStepper: false,
     },
 })
