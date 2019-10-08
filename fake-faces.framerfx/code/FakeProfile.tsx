@@ -1,16 +1,15 @@
 import * as React from "react"
 import { Frame, addPropertyControls, ControlType } from "framer"
 
-export function FakeProfile(props) {
-    const { size, bound, boundColor, boundDisplay, radius } = props
+export function FakeProfileImage(props) {
+    const { size, bound, boundColor, boundDisplay, radius, ...rest } = props
 
     return (
         <Frame
             center
-            width={bound}
-            height={bound}
-            size={"100%"}
             backgroundColor={boundDisplay ? boundColor : "transparent"}
+            {...rest}
+            overflow={"hidden"}
         >
             <Frame
                 center
@@ -19,37 +18,28 @@ export function FakeProfile(props) {
                 height={size}
                 image="https://thispersondoesnotexist.com/image"
                 borderRadius={radius + "%"}
-                overflow={"hidden"}
             />
         </Frame>
     )
 }
 
-FakeProfile.defaultProps = {
+FakeProfileImage.defaultProps = {
     size: 148,
     bound: 180,
     boundColor: "#f7e8f6",
     boundDisplay: true,
     radius: 50,
+    width: 172,
+    height: 172,
 }
 
-addPropertyControls(FakeProfile, {
+addPropertyControls(FakeProfileImage, {
     size: {
         min: 24,
-        max: 240,
+        max: 380,
         title: "Image Size",
         type: ControlType.Number,
         defaultValue: 148,
-        step: 4,
-        displayStepper: true,
-    },
-
-    bound: {
-        min: 24,
-        max: 280,
-        title: "Bound Size",
-        type: ControlType.Number,
-        defaultValue: 180,
         step: 4,
         displayStepper: true,
     },
